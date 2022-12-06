@@ -4,7 +4,7 @@ namespace PokeAPI
 	{
 		public Form1()
 		{
-			InitializeComponent();
+			InitializeComponent(); 
 		}
 	}
 }
