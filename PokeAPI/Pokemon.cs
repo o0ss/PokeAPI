@@ -7,5 +7,4 @@ public class Pokemon
 	public int height {get; set;} /* in decimeters */
 	public int weight {get; set;} /* in hectograms */
 	public Ability[] abilities {get; set;}
-
 }
