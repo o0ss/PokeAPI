@@ -1,12 +1,12 @@
 using System.Net.Http.Json;
-public class PokeAPI
+public class PokeAPI2
 {
     public HttpClient client;
     public int POKEMON_COUNT = 1154;
     public NamedAPIResourceList pokemonList;
     public Dictionary<int, string> diccPokeNames, diccPokeURLs;
     public Dictionary<int, Pokemon> diccPokemons;
-	public PokeAPI()
+	public PokeAPI2()
 	{
         client = new HttpClient();
         client.BaseAddress = new Uri("https://pokeapi.co/api/v2/");
