@@ -1,10 +1,11 @@
-
+using System.Net.Http.Json;
 public class PokeAPI
 {
     public HttpClient client;
     public int POKEMON_COUNT = 1154;
     public NamedAPIResourceList pokemonList;
     public Dictionary<int, string> diccPokeNames, diccPokeURLs;
+    public Dictionary<int, Pokemon> diccPokemons;
 	public PokeAPI()
 	{
         client = new HttpClient();
@@ -46,9 +47,9 @@ public class PokeAPI
             POKEMON_COUNT = pokemonList.count;
             for (int i = 0; i < POKEMON_COUNT; i++)
             {
-                if(!diccPokeNames.Contains(i))
+                if(!diccPokeNames.ContainsKey(i))
                     diccPokeNames.Add(i, pokemonList.results[i].name);
-                if(!diccPokeURLs.Contains(i))
+                if(!diccPokeURLs.ContainsKey(i))
                     diccPokeURLs.Add(i, pokemonList.results[i].url);
             }
             return pokemonList;
@@ -60,14 +61,18 @@ public class PokeAPI
     {
         try
 		{
+            if (diccPokemons.ContainsKey(id))
+                return diccPokemons[id];
+
 			if (1 <= id && id <= POKEMON_COUNT)
 			{
-				Personaje personaje;
-				HttpResponseMessage response = await client.GetAsync(string.Concat("character/", id.ToString()));
+				Pokemon poke;
+				HttpResponseMessage response = await client.GetAsync(new Uri(diccPokeURLs[id]));
 				if (response.IsSuccessStatusCode)
 				{
-					personaje = await response.Content.ReadFromJsonAsync<Personaje>();
-					return personaje;
+					poke = await response.Content.ReadFromJsonAsync<Pokemon>();
+                    diccPokemons.Add(id, poke);
+					return poke;
 				}
 			}
 			
