@@ -8,9 +8,11 @@ public class Pokemon
 	public int weight {get; set;} /* in hectograms */
 	public Ability[] abilities {get; set;}
 	public NamedAPIResource[] forms {get; set;}
+	
 	public PokemonMove[] moves {get; set;}
 	public PokemonSprite sprites {get; set;}
 	public NamedAPIResource species {get; set;}
+	
 	public PokemonStat[] stats {get; set;}
 	public PokemonType[] types {get; set;}
 
@@ -19,10 +21,12 @@ public class Pokemon
 		public bool is_hidden {get; set;}
 		public int slot {get; set;}
 		public NamedAPIResource ability {get; set;}
+		
 	}
 	public class PokemonMove
 	{
 		public NamedAPIResource move {get; set;}
+		
 	}
 	public class PokemonSprite
 	{
@@ -38,6 +42,7 @@ public class Pokemon
 	public class PokemonStat
 	{
 		public NamedAPIResource stat {get; set;}
+		
 		public int effort {get; set;}
 		public int base_stat {get; set;}
 	}
@@ -45,5 +50,6 @@ public class Pokemon
 	{
 		public int slot {get; set;}
 		public NamedAPIResource type {get; set;}
+		
 	}
 }
