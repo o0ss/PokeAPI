@@ -1,4 +1,4 @@
-namespace PokeAPI
+namespace PokeAPIApp
 {
 	public partial class Form1 : Form
 	{
