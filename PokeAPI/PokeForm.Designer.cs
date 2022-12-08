@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelPokedex = new System.Windows.Forms.Label();
             this.listViewMoves = new System.Windows.Forms.ListView();
             this.listBoxPokemon = new System.Windows.Forms.ListBox();
             this.groupBoxPokeDetails = new System.Windows.Forms.GroupBox();
@@ -57,15 +57,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSprite)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // labelPokedex
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(35, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pokedex";
+            this.labelPokedex.AutoSize = true;
+            this.labelPokedex.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelPokedex.Location = new System.Drawing.Point(35, 18);
+            this.labelPokedex.Name = "labelPokedex";
+            this.labelPokedex.Size = new System.Drawing.Size(82, 25);
+            this.labelPokedex.TabIndex = 0;
+            this.labelPokedex.Text = "Pokedex";
             // 
             // listViewMoves
             // 
@@ -321,7 +321,7 @@
             this.ClientSize = new System.Drawing.Size(720, 463);
             this.Controls.Add(this.groupBoxPokeDetails);
             this.Controls.Add(this.listBoxPokemon);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelPokedex);
             this.Name = "PokeForm";
             this.Text = "PokeAPI - Oscar Sixtos";
             this.Load += new System.EventHandler(this.PokeForm_Load);
@@ -335,7 +335,7 @@
 
 		#endregion
 
-		private Label label1;
+		private Label labelPokedex;
 		private ListView listViewMoves;
 		private ListBox listBoxPokemon;
 		private GroupBox groupBoxPokeDetails;

@@ -81,6 +81,8 @@ namespace PokeAPI
 
 		private async void PokeForm_Load(object sender, EventArgs e)
 		{
+			labelPokedex.Text = "Cargando...";
+			Cursor = Cursors.AppStarting;
 			PokemonAPI.NamedAPIResourceList? pokelist = await api.GetPokemonList();
 			if (pokelist != null && pokelist.results != null)
 			{
@@ -89,6 +91,8 @@ namespace PokeAPI
 					listBoxPokemon.Items.Add(textInf.ToTitleCase(pokelist.results[i].ToString()));
 				}
 			}
+			labelPokedex.Text = "Pokedex";
+			Cursor = Cursors.Default;
 		}
 	}
 }
