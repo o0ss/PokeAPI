@@ -61,7 +61,7 @@
             // 
             this.labelPokedex.AutoSize = true;
             this.labelPokedex.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPokedex.Location = new System.Drawing.Point(35, 18);
+            this.labelPokedex.Location = new System.Drawing.Point(22, 18);
             this.labelPokedex.Name = "labelPokedex";
             this.labelPokedex.Size = new System.Drawing.Size(82, 25);
             this.labelPokedex.TabIndex = 0;
@@ -69,22 +69,21 @@
             // 
             // listViewMoves
             // 
-            this.listViewMoves.Location = new System.Drawing.Point(223, 211);
+            this.listViewMoves.Location = new System.Drawing.Point(202, 211);
             this.listViewMoves.Name = "listViewMoves";
-            this.listViewMoves.Size = new System.Drawing.Size(221, 146);
+            this.listViewMoves.Size = new System.Drawing.Size(242, 146);
             this.listViewMoves.TabIndex = 3;
             this.listViewMoves.UseCompatibleStateImageBehavior = false;
             this.listViewMoves.View = System.Windows.Forms.View.List;
             // 
             // listBoxPokemon
             // 
-            this.listBoxPokemon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listBoxPokemon.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBoxPokemon.FormattingEnabled = true;
             this.listBoxPokemon.ItemHeight = 17;
-            this.listBoxPokemon.Location = new System.Drawing.Point(35, 59);
+            this.listBoxPokemon.Location = new System.Drawing.Point(22, 59);
             this.listBoxPokemon.Name = "listBoxPokemon";
-            this.listBoxPokemon.Size = new System.Drawing.Size(174, 376);
+            this.listBoxPokemon.Size = new System.Drawing.Size(174, 378);
             this.listBoxPokemon.TabIndex = 5;
             this.listBoxPokemon.SelectedValueChanged += new System.EventHandler(this.listBoxPokemon_SelectedValueChanged);
             // 
@@ -111,9 +110,9 @@
             this.groupBoxPokeDetails.Controls.Add(this.pictureBoxSprite);
             this.groupBoxPokeDetails.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBoxPokeDetails.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBoxPokeDetails.Location = new System.Drawing.Point(228, 59);
+            this.groupBoxPokeDetails.Location = new System.Drawing.Point(215, 59);
             this.groupBoxPokeDetails.Name = "groupBoxPokeDetails";
-            this.groupBoxPokeDetails.Size = new System.Drawing.Size(468, 376);
+            this.groupBoxPokeDetails.Size = new System.Drawing.Size(468, 378);
             this.groupBoxPokeDetails.TabIndex = 6;
             this.groupBoxPokeDetails.TabStop = false;
             this.groupBoxPokeDetails.Text = "Detalles";
@@ -123,7 +122,7 @@
             // 
             this.label_Moves.AutoSize = true;
             this.label_Moves.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_Moves.Location = new System.Drawing.Point(223, 189);
+            this.label_Moves.Location = new System.Drawing.Point(202, 189);
             this.label_Moves.Name = "label_Moves";
             this.label_Moves.Size = new System.Drawing.Size(50, 19);
             this.label_Moves.TabIndex = 16;
@@ -163,7 +162,7 @@
             // 
             this.labelXP.AutoSize = true;
             this.labelXP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelXP.Location = new System.Drawing.Point(402, 99);
+            this.labelXP.Location = new System.Drawing.Point(397, 99);
             this.labelXP.Name = "labelXP";
             this.labelXP.Size = new System.Drawing.Size(25, 19);
             this.labelXP.TabIndex = 14;
@@ -174,7 +173,7 @@
             this.label_XP.AutoSize = true;
             this.label_XP.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_XP.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_XP.Location = new System.Drawing.Point(377, 99);
+            this.label_XP.Location = new System.Drawing.Point(372, 99);
             this.label_XP.Name = "label_XP";
             this.label_XP.Size = new System.Drawing.Size(28, 19);
             this.label_XP.TabIndex = 13;
@@ -187,7 +186,7 @@
             this.Base});
             this.listViewStats.Location = new System.Drawing.Point(25, 211);
             this.listViewStats.Name = "listViewStats";
-            this.listViewStats.Size = new System.Drawing.Size(179, 146);
+            this.listViewStats.Size = new System.Drawing.Size(167, 146);
             this.listViewStats.TabIndex = 12;
             this.listViewStats.UseCompatibleStateImageBehavior = false;
             this.listViewStats.View = System.Windows.Forms.View.Details;
@@ -268,7 +267,7 @@
             // 
             this.labelPokeID.AutoSize = true;
             this.labelPokeID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.labelPokeID.Location = new System.Drawing.Point(402, 75);
+            this.labelPokeID.Location = new System.Drawing.Point(397, 75);
             this.labelPokeID.Name = "labelPokeID";
             this.labelPokeID.Size = new System.Drawing.Size(25, 19);
             this.labelPokeID.TabIndex = 5;
@@ -279,7 +278,7 @@
             this.label_PokeID.AutoSize = true;
             this.label_PokeID.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_PokeID.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label_PokeID.Location = new System.Drawing.Point(379, 75);
+            this.label_PokeID.Location = new System.Drawing.Point(374, 75);
             this.label_PokeID.Name = "label_PokeID";
             this.label_PokeID.Size = new System.Drawing.Size(26, 19);
             this.label_PokeID.TabIndex = 4;
@@ -318,11 +317,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(720, 463);
+            this.ClientSize = new System.Drawing.Size(703, 463);
             this.Controls.Add(this.groupBoxPokeDetails);
             this.Controls.Add(this.listBoxPokemon);
             this.Controls.Add(this.labelPokedex);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(719, 502);
+            this.MinimumSize = new System.Drawing.Size(719, 502);
             this.Name = "PokeForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PokeAPI - Oscar Sixtos";
             this.Load += new System.EventHandler(this.PokeForm_Load);
             this.groupBoxPokeDetails.ResumeLayout(false);
