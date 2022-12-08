@@ -4,7 +4,7 @@ using System.Text.Json;
 public class PokemonAPI
 {
 	public HttpClient client;
-	JsonSerializerOptions json_options;
+	private JsonSerializerOptions json_options;
 	public int POKEMON_COUNT = 1154;
 	public NamedAPIResourceList? pokemonList;
 	public Dictionary<int, string?> diccPokeNames, diccPokeURLs;
@@ -50,17 +50,16 @@ public class PokemonAPI
 
 	public async Task<NamedAPIResourceList?> GetPokemonList()
 	{
-		HttpResponseMessage resp = await client.GetAsync("pokemon/?limit=20");
+		HttpResponseMessage resp = await client.GetAsync("pokemon/?limit=10000");
 		if(resp.IsSuccessStatusCode)
 		{
 			pokemonList = await resp.Content.ReadFromJsonAsync<NamedAPIResourceList>();
 			if (pokemonList != null && pokemonList.results != null)
 			{
 				POKEMON_COUNT = pokemonList.count;
-				//for (int i = 0; i < POKEMON_COUNT; i++)
-					for (int i = 0; i < 20 ; i++)
-					{
-						if (!diccPokeNames.ContainsKey(i))
+				for (int i = 0; i < POKEMON_COUNT; i++) //for (int i = 0; i < 20 ; i++)
+				{
+					if (!diccPokeNames.ContainsKey(i))
 						diccPokeNames.Add(i, pokemonList.results[i].name);
 					if (!diccPokeURLs.ContainsKey(i))
 						diccPokeURLs.Add(i, pokemonList.results[i].url);
@@ -86,7 +85,8 @@ public class PokemonAPI
 				{
 					poke = await response.Content.ReadFromJsonAsync<Pokemon>(json_options);
 					poke?.ObtenerImg();
-					diccPokemons.Add(id_local, poke);
+					if(!diccPokemons.ContainsKey(id_local))
+						diccPokemons.Add(id_local, poke);
 					return poke;
 				}
 			}
